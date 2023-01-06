@@ -71,7 +71,7 @@ class DBStorage:
             self.session.delete(obj)
 
     def reload(self):
-        """configuration base
+        """configuration
         """
         Base.metadata.create_all(self.__engine)
         sec = sessionmaker(bind=self.__engine, expire_on_commit=False)
